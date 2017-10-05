@@ -1,11 +1,13 @@
 package com.example.admin.mylistproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,5 +79,10 @@ public class MainActivity extends AppCompatActivity {
         rvPersonList.setAdapter(personListAdapter);
 
         itemTouchHelper.attachToRecyclerView(rvPersonList);
+    }
+
+    public void nextList(View view) {
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 }
